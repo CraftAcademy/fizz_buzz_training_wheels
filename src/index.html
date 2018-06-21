@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Fizz Buzz</title>
+    <title>Fizz Buzz</title>
 
 </head>
 
@@ -14,14 +14,17 @@
 
 <script src="js/fizz-buzz.js"></script>
 <script>
+
+
     document.addEventListener('DOMContentLoaded', () => {
-        let button = document.getElementById('button')
-        let displayDiv = document.getElementById('display_answer')
+        const button = document.getElementById('button')
+        const displayDiv = document.getElementById('display_answer')
+
         button.addEventListener('click', () => {
-            let value = document.getElementById('value').value
-            let fizzBuzz = new FizzBuzz 
-            let result = fizzBuzz.check(value)
-            displayDiv.innerHTML = result; 
+            const value = document.getElementById('value').value
+            const fizzBuzz = new FizzBuzz
+            const result = fizzBuzz.check(value)
+            displayDiv.innerHTML = result;
         })
     })
 </script>

@@ -1,14 +1,18 @@
 function FizzBuzz() {
+
+    const hasZeroReminder = (number, divider) => {
+        return (number % divider) === 0;
+    }
+
     this.check = (number) => {
-        if (number % 15 === 0) {
+        if (hasZeroReminder(number, 15)) {
             return 'fizz-buzz';
-        } else if (number % 5 === 0) {
+        } else if (hasZeroReminder(number, 5)) {
             return 'buzz';
-        } else if (number % 3 === 0) {
+        } else if (hasZeroReminder(number, 3)) {
             return 'fizz';
         } else {
             return number;
-
         }
     }
 }

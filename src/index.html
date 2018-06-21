@@ -20,7 +20,8 @@
         const button = document.getElementById('button')
         const displayDiv = document.getElementById('display_answer')
 
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (event) => {
+            debugger;
             const value = document.getElementById('value').value
             const fizzBuzz = new FizzBuzz
             const result = fizzBuzz.check(value)

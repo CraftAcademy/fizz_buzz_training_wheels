@@ -24,4 +24,25 @@ describe('Fizz Buzz', () => {
         expect(fizzBuzz.check(15)).to.eql('fizz-buzz')
     })
 
+    describe('check()', () => {
+        let fizzBuzz
+
+        beforeEach(() => {
+            fizzBuzz = new FizzBuzz
+        });
+        let tests = [
+            { number: 1, expected: 1 },
+            { number: 5, expected: 'buzz' },
+            { number: 3, expected: 'fizz' },
+            { number: 15, expected: 'fizz-buzz' }
+        ];
+
+        tests.forEach((test) => {
+            it(`responds with ${test.expected} when number is divisible with ${test.number}`, () => {
+                expect(fizzBuzz.check(test.number)).to.eql(test.expected)
+            });
+        });
+    });
+
+
 })
